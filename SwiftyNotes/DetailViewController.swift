@@ -39,17 +39,12 @@ class DetailViewController: UIViewController {
 
         //textView.text = "SDFSDFSDFDSFDSFSD"
         
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        let managedContext = appDelegate.managedObjectContext
-//        
-//        let entity = NSEntityDescription.entityForName("note", inManagedObjectContext: managedContext)
-//        let note = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        //note.
+    
+    
+
         
     }
 
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
