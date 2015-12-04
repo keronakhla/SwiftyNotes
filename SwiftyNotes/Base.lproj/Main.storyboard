@@ -55,13 +55,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Note Detail" id="mOI-FS-AaM">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="GnH-X0-TCg">
-                            <connections>
-                                <action selector="saveNotes:" destination="JEX-9P-axG" id="iuQ-8Y-kkT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Note Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="textView" destination="r0c-9D-yZG" id="gg5-7f-LsR"/>
