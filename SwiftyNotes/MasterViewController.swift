@@ -46,7 +46,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-        
+        performSegueWithIdentifier("showSegue", sender: self)
              
         // Save the context.
         do {

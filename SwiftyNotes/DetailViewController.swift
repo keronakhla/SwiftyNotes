@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class DetailViewController: UIViewController {
         didSet {
             // Update the view.
             self.configureView()
+
         }
     }
 
@@ -34,10 +36,20 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+
+        //textView.text = "SDFSDFSDFDSFDSFSD"
         
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        
+//        let entity = NSEntityDescription.entityForName("note", inManagedObjectContext: managedContext)
+//        let note = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        //note.
         
     }
 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

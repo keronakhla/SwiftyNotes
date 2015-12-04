@@ -124,6 +124,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <segue destination="JEX-9P-axG" kind="show" identifier="showSegue" id="HNR-eA-KZm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +149,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="HNR-eA-KZm"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  Notes.swift
+//  Note.swift
 //  SwiftyNotes
 //
 //  Created by Kerolos Nakhla on 12/3/15.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Notes: NSManagedObject {
+class Note: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

@@ -1,5 +1,5 @@
 //
-//  Notes+CoreDataProperties.swift
+//  Note+CoreDataProperties.swift
 //  SwiftyNotes
 //
 //  Created by Kerolos Nakhla on 12/3/15.
@@ -12,9 +12,10 @@
 import Foundation
 import CoreData
 
-extension Notes {
+extension Note {
 
     @NSManaged var body: String?
     @NSManaged var timeStamp: NSDate?
+    @NSManaged var noteTitle: String?
 
 }

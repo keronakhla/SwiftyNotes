@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
-    <entity name="Note" representedClassName=".Notes">
+    <entity name="Note" representedClassName=".Note">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
         <userInfo/>
     </entity>
     <elements>
-        <element name="Note" positionX="261" positionY="189" width="128" height="75"/>
+        <element name="Note" positionX="261" positionY="189" width="128" height="90"/>
     </elements>
 </model>
