@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5105151E1C11082200FF95F5 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105151C1C11082200FF95F5 /* Notes+CoreDataProperties.swift */; };
-		5105151F1C11082200FF95F5 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105151D1C11082200FF95F5 /* Notes.swift */; };
+		510515221C110F2800FF95F5 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515201C110F2800FF95F5 /* Notes+CoreDataProperties.swift */; };
+		510515231C110F2800FF95F5 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515211C110F2800FF95F5 /* Notes.swift */; };
 		51980D851C0C333200CDD5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51980D841C0C333200CDD5D1 /* AppDelegate.swift */; };
 		51980D881C0C333200CDD5D1 /* SwiftyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51980D861C0C333200CDD5D1 /* SwiftyNotes.xcdatamodeld */; };
 		51980D8A1C0C333200CDD5D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51980D891C0C333200CDD5D1 /* MasterViewController.swift */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5105151C1C11082200FF95F5 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5105151D1C11082200FF95F5 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		510515201C110F2800FF95F5 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		510515211C110F2800FF95F5 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		51980D811C0C333200CDD5D1 /* SwiftyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51980D841C0C333200CDD5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51980D871C0C333200CDD5D1 /* SwiftyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftyNotes.xcdatamodel; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		51980D831C0C333200CDD5D1 /* SwiftyNotes */ = {
 			isa = PBXGroup;
 			children = (
-				5105151C1C11082200FF95F5 /* Notes+CoreDataProperties.swift */,
-				5105151D1C11082200FF95F5 /* Notes.swift */,
+				510515201C110F2800FF95F5 /* Notes+CoreDataProperties.swift */,
+				510515211C110F2800FF95F5 /* Notes.swift */,
 				51980D841C0C333200CDD5D1 /* AppDelegate.swift */,
 				51980D891C0C333200CDD5D1 /* MasterViewController.swift */,
 				51980D8B1C0C333200CDD5D1 /* DetailViewController.swift */,
@@ -272,8 +272,8 @@
 				51980D881C0C333200CDD5D1 /* SwiftyNotes.xcdatamodeld in Sources */,
 				51980D8A1C0C333200CDD5D1 /* MasterViewController.swift in Sources */,
 				51980D8C1C0C333200CDD5D1 /* DetailViewController.swift in Sources */,
-				5105151E1C11082200FF95F5 /* Notes+CoreDataProperties.swift in Sources */,
-				5105151F1C11082200FF95F5 /* Notes.swift in Sources */,
+				510515221C110F2800FF95F5 /* Notes+CoreDataProperties.swift in Sources */,
+				510515231C110F2800FF95F5 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ import CoreData
 
 extension Notes {
 
-    @NSManaged var timeStamp: NSDate?
     @NSManaged var body: String?
+    @NSManaged var timeStamp: NSDate?
 
 }
