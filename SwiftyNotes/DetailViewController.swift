@@ -13,6 +13,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
 
+    @IBAction func saveNotes(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Message Saved", message: nil, preferredStyle: .Alert)
+        let okButton = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            // Do something
+        }
+        alertController.addAction(okButton)
+        self.presentViewController(alertController, animated: true){
+            // Do something--maybe a condition?
+        }
+    }
 
     var detailItem: AnyObject? {
         didSet {
