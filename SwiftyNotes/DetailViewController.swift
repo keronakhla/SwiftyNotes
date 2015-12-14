@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
-
+    var managedContext: NSManagedObjectContext!
 
     var detailItem: AnyObject? {
         didSet {
