@@ -18,6 +18,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UINavigationBar.appearance().barTintColor = UIColor(red: 46.0/225, green: 204.0/225, blue: 113.0/225, alpha: 1.0)
+        
+        
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")

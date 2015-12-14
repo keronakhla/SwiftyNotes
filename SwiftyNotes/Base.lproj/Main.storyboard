@@ -33,40 +33,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0c-9D-yZG">
-                                <rect key="frame" x="0.0" y="131" width="600" height="469"/>
+                                <rect key="frame" x="34" y="158" width="532" height="302"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-pn-22g">
-                                <rect key="frame" x="20" y="88" width="560" height="30"/>
+                                <rect key="frame" x="34" y="101" width="532" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra5-fR-9My">
+                                <rect key="frame" x="34" y="510" width="532" height="30"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.19607843137254902" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="SAVE NOTE"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="r0c-9D-yZG" secondAttribute="trailing" id="6JZ-jB-3d1"/>
-                            <constraint firstItem="r0c-9D-yZG" firstAttribute="top" secondItem="YsQ-pn-22g" secondAttribute="bottom" constant="13" id="AvA-UE-tYn"/>
-                            <constraint firstItem="r0c-9D-yZG" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="KH4-lZ-l06"/>
-                            <constraint firstItem="YsQ-pn-22g" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="24" id="O4E-4j-7de"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YsQ-pn-22g" secondAttribute="trailing" id="Sed-me-SYy"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="YsQ-pn-22g" secondAttribute="leading" id="kSU-dT-Q0Z"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="r0c-9D-yZG" secondAttribute="bottom" id="kpq-0Z-bY7"/>
+                            <constraint firstItem="YsQ-pn-22g" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="37" id="03D-sd-Xfk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r0c-9D-yZG" secondAttribute="trailing" constant="14" id="2D1-bj-VAF"/>
+                            <constraint firstItem="r0c-9D-yZG" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="14" id="4J0-Ij-QII"/>
+                            <constraint firstItem="r0c-9D-yZG" firstAttribute="top" secondItem="YsQ-pn-22g" secondAttribute="bottom" constant="27" id="Ag3-bc-Pdu"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="r0c-9D-yZG" secondAttribute="bottom" constant="140" id="EOl-k4-T88"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YsQ-pn-22g" secondAttribute="trailing" constant="14" id="Q3H-Ua-1Ub"/>
+                            <constraint firstItem="Ra5-fR-9My" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="14" id="SeH-tt-Uzy"/>
+                            <constraint firstItem="r0c-9D-yZG" firstAttribute="leading" secondItem="YsQ-pn-22g" secondAttribute="trailing" constant="-532" id="YnQ-aS-bdW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ra5-fR-9My" secondAttribute="trailing" constant="14" id="Z1G-uB-AI6"/>
+                            <constraint firstItem="YsQ-pn-22g" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="14" id="bk5-70-6Oa"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="Ra5-fR-9My" secondAttribute="bottom" constant="60" id="maU-Iu-l5w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YnQ-aS-bdW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Note Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Notes" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="textView" destination="r0c-9D-yZG" id="gg5-7f-LsR"/>
                     </connections>
                 </viewController>
