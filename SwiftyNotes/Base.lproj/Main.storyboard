@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="193"/>
+            <point key="canvasLocation" x="709" y="155"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -142,7 +142,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="Zdf-7t-Un8"/>
                     <connections>
-                        <segue destination="JEX-9P-axG" kind="show" identifier="showSegue" id="HNR-eA-KZm"/>
+                        <segue destination="Qmw-Xe-u6P" kind="presentation" identifier="showSegue" id="h1O-K6-cm0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -162,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-45" y="155"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Pfe-gz-VDy">
@@ -176,44 +176,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
-                                <rect key="frame" x="34" y="158" width="532" height="302"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-HI-IFI">
-                                <rect key="frame" x="34" y="101" width="532" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
-                                <rect key="frame" x="34" y="510" width="532" height="30"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.1960784314" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="SAVE NOTE"/>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prr-KZ-8Zf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="ATA-Tw-yEp">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QzU-uP-XyS">
+                                            <connections>
+                                                <action selector="doneButton:" destination="Qmw-Xe-u6P" id="Cge-zx-rST"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-wd-hqO">
+                                <rect key="frame" x="20" y="60" width="560" height="484"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
+                                        <rect key="frame" x="14" y="143" width="532" height="236"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Tags..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-Qz-9o2">
+                                        <rect key="frame" x="14" y="100" width="532" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Note Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-HI-IFI">
+                                        <rect key="frame" x="14" y="57" width="532" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a New Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvv-BP-0SP">
+                                        <rect key="frame" x="14" y="23" width="159" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
+                                        <rect key="frame" x="14" y="439" width="532" height="30"/>
+                                        <color key="backgroundColor" red="0.1647058824" green="0.1960784314" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="SAVE NOTE"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69019607843137254" green="0.71372549019607845" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="18m-ul-bre"/>
-                            <constraint firstItem="Zya-CS-pKA" firstAttribute="top" secondItem="fhS-Qh-5YW" secondAttribute="bottom" constant="60" id="3Gi-1V-ifa"/>
-                            <constraint firstItem="jBG-HI-IFI" firstAttribute="top" secondItem="Slb-mg-WjJ" secondAttribute="bottom" constant="37" id="5Wd-RJ-RYs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jBG-HI-IFI" secondAttribute="trailing" constant="14" id="6QF-Ju-jTc"/>
-                            <constraint firstItem="jBG-HI-IFI" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="Hno-Ty-2VL"/>
-                            <constraint firstItem="fhS-Qh-5YW" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="Q1r-3x-24j"/>
-                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="top" secondItem="jBG-HI-IFI" secondAttribute="bottom" constant="27" id="i2Z-vg-cjU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pOe-Tq-6iM" secondAttribute="trailing" constant="14" id="iJd-TO-DtJ"/>
-                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="leading" secondItem="jBG-HI-IFI" secondAttribute="trailing" constant="-532" id="jhK-be-reD"/>
-                            <constraint firstItem="Zya-CS-pKA" firstAttribute="top" secondItem="pOe-Tq-6iM" secondAttribute="bottom" constant="140" id="jqf-1I-h8B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fhS-Qh-5YW" secondAttribute="trailing" constant="14" id="zHD-Tn-t3t"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="jhK-be-reD"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Notes" id="YfH-gg-BY2"/>
@@ -223,11 +234,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2e-og-oE4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="-630"/>
+            <point key="canvasLocation" x="1445" y="-630"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
-        <segue reference="GKi-kA-LjT"/>
     </inferredMetricsTieBreakers>
 </document>

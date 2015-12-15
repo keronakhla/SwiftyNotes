@@ -15,6 +15,9 @@ class CreateNoteViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     var managedContext: NSManagedObjectContext!
     
+    @IBAction func doneButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -42,7 +45,8 @@ class CreateNoteViewController: UIViewController {
         
         //textView.text = "SDFSDFSDFDSFDSFSD"
         
-        
+        UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
+
         
         
         
