@@ -24,7 +24,7 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="SwiftyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailView" title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="SwiftyNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="809" y="193"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -99,7 +99,7 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController storyboardIdentifier="MasterViewController" title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="SwiftyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MasterView" title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="SwiftyNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,9 +164,70 @@
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="Pfe-gz-VDy">
+            <objects>
+                <viewController storyboardIdentifier="CreateView" title="Detail" id="Qmw-Xe-u6P" customClass="CreateNoteViewController" customModule="SwiftyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Slb-mg-WjJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zya-CS-pKA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HKF-38-WAP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
+                                <rect key="frame" x="34" y="158" width="532" height="302"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-HI-IFI">
+                                <rect key="frame" x="34" y="101" width="532" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
+                                <rect key="frame" x="34" y="510" width="532" height="30"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1960784314" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="SAVE NOTE"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="18m-ul-bre"/>
+                            <constraint firstItem="Zya-CS-pKA" firstAttribute="top" secondItem="fhS-Qh-5YW" secondAttribute="bottom" constant="60" id="3Gi-1V-ifa"/>
+                            <constraint firstItem="jBG-HI-IFI" firstAttribute="top" secondItem="Slb-mg-WjJ" secondAttribute="bottom" constant="37" id="5Wd-RJ-RYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jBG-HI-IFI" secondAttribute="trailing" constant="14" id="6QF-Ju-jTc"/>
+                            <constraint firstItem="jBG-HI-IFI" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="Hno-Ty-2VL"/>
+                            <constraint firstItem="fhS-Qh-5YW" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leadingMargin" constant="14" id="Q1r-3x-24j"/>
+                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="top" secondItem="jBG-HI-IFI" secondAttribute="bottom" constant="27" id="i2Z-vg-cjU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pOe-Tq-6iM" secondAttribute="trailing" constant="14" id="iJd-TO-DtJ"/>
+                            <constraint firstItem="pOe-Tq-6iM" firstAttribute="leading" secondItem="jBG-HI-IFI" secondAttribute="trailing" constant="-532" id="jhK-be-reD"/>
+                            <constraint firstItem="Zya-CS-pKA" firstAttribute="top" secondItem="pOe-Tq-6iM" secondAttribute="bottom" constant="140" id="jqf-1I-h8B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fhS-Qh-5YW" secondAttribute="trailing" constant="14" id="zHD-Tn-t3t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jhK-be-reD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Notes" id="YfH-gg-BY2"/>
+                    <connections>
+                        <outlet property="textView" destination="pOe-Tq-6iM" id="NIe-fK-y6S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2e-og-oE4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="-630"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HNR-eA-KZm"/>
         <segue reference="6S0-TO-JiA"/>
+        <segue reference="GKi-kA-LjT"/>
     </inferredMetricsTieBreakers>
 </document>
