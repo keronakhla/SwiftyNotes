@@ -176,11 +176,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prr-KZ-8Zf">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prr-KZ-8Zf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem id="ATA-Tw-yEp">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QzU-uP-XyS">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="doneButton:" destination="Qmw-Xe-u6P" id="Cge-zx-rST"/>
                                             </connections>
@@ -188,43 +189,79 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-wd-hqO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-wd-hqO">
                                 <rect key="frame" x="20" y="60" width="560" height="484"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Note Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-HI-IFI">
+                                        <rect key="frame" x="14" y="57" width="532" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Tags..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-Qz-9o2">
+                                        <rect key="frame" x="14" y="100" width="532" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
                                         <rect key="frame" x="14" y="143" width="532" height="236"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Tags..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-Qz-9o2">
-                                        <rect key="frame" x="14" y="100" width="532" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Note Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-HI-IFI">
-                                        <rect key="frame" x="14" y="57" width="532" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a New Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvv-BP-0SP">
-                                        <rect key="frame" x="14" y="23" width="159" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
                                         <rect key="frame" x="14" y="439" width="532" height="30"/>
                                         <color key="backgroundColor" red="0.1647058824" green="0.1960784314" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="SAVE NOTE"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvv-BP-0SP">
+                                        <rect key="frame" x="14" y="23" width="149" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fhS-Qh-5YW" secondAttribute="trailing" constant="14" id="1H9-3s-r9a"/>
+                                    <constraint firstAttribute="bottom" secondItem="pOe-Tq-6iM" secondAttribute="bottom" constant="105" id="4JD-zX-Fzg"/>
+                                    <constraint firstItem="fhS-Qh-5YW" firstAttribute="leading" secondItem="GAs-wd-hqO" secondAttribute="leading" constant="14" id="AE1-Gh-TRC"/>
+                                    <constraint firstItem="pOe-Tq-6iM" firstAttribute="leading" secondItem="GAs-wd-hqO" secondAttribute="leading" constant="14" id="Hil-zO-z4U"/>
+                                    <constraint firstItem="Kvv-BP-0SP" firstAttribute="leading" secondItem="GAs-wd-hqO" secondAttribute="leading" constant="14" id="JTT-lR-Ol4"/>
+                                    <constraint firstItem="PLc-Qz-9o2" firstAttribute="top" secondItem="jBG-HI-IFI" secondAttribute="bottom" constant="13" id="MJR-X9-H2v"/>
+                                    <constraint firstAttribute="trailing" secondItem="PLc-Qz-9o2" secondAttribute="trailing" constant="14" id="OLS-A2-riE"/>
+                                    <constraint firstAttribute="bottom" secondItem="fhS-Qh-5YW" secondAttribute="bottom" constant="15" id="PLP-9Z-RGx"/>
+                                    <constraint firstItem="jBG-HI-IFI" firstAttribute="top" secondItem="Kvv-BP-0SP" secondAttribute="bottom" constant="12" id="Pw1-za-ZgS"/>
+                                    <constraint firstItem="jBG-HI-IFI" firstAttribute="leading" secondItem="GAs-wd-hqO" secondAttribute="leading" constant="14" id="Pw9-i4-vhP"/>
+                                    <constraint firstItem="Kvv-BP-0SP" firstAttribute="top" secondItem="GAs-wd-hqO" secondAttribute="top" constant="23" id="UQW-4C-s1A"/>
+                                    <constraint firstItem="fhS-Qh-5YW" firstAttribute="top" secondItem="pOe-Tq-6iM" secondAttribute="bottom" constant="60" id="e61-9s-Js5"/>
+                                    <constraint firstItem="pOe-Tq-6iM" firstAttribute="top" secondItem="PLc-Qz-9o2" secondAttribute="bottom" constant="13" id="jlc-hq-G0u"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kvv-BP-0SP" secondAttribute="trailing" constant="387" id="mDc-Be-0ce"/>
+                                    <constraint firstItem="jBG-HI-IFI" firstAttribute="top" secondItem="Kvv-BP-0SP" secondAttribute="bottom" constant="13" id="p2p-sY-tab"/>
+                                    <constraint firstAttribute="trailing" secondItem="jBG-HI-IFI" secondAttribute="trailing" constant="14" id="pNb-Yt-xhX"/>
+                                    <constraint firstItem="PLc-Qz-9o2" firstAttribute="leading" secondItem="GAs-wd-hqO" secondAttribute="leading" constant="14" id="wVk-nk-4Tb"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOe-Tq-6iM" secondAttribute="trailing" constant="14" id="yZI-LZ-N8y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mDc-Be-0ce"/>
+                                        <exclude reference="p2p-sY-tab"/>
+                                        <exclude reference="4JD-zX-Fzg"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.69019607843137254" green="0.71372549019607845" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="prr-KZ-8Zf" firstAttribute="top" secondItem="HKF-38-WAP" secondAttribute="top" id="8b7-89-vPM"/>
+                            <constraint firstItem="prr-KZ-8Zf" firstAttribute="leading" secondItem="HKF-38-WAP" secondAttribute="leading" id="ORT-jm-bcg"/>
+                            <constraint firstItem="Zya-CS-pKA" firstAttribute="top" secondItem="GAs-wd-hqO" secondAttribute="bottom" constant="56" id="fud-dh-mff"/>
+                            <constraint firstAttribute="trailing" secondItem="prr-KZ-8Zf" secondAttribute="trailing" id="gLn-4n-ePD"/>
+                            <constraint firstItem="GAs-wd-hqO" firstAttribute="top" secondItem="Slb-mg-WjJ" secondAttribute="bottom" constant="40" id="hMF-4w-S1f"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GAs-wd-hqO" secondAttribute="leading" id="lgB-Md-rnM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GAs-wd-hqO" secondAttribute="trailing" id="q3P-Qu-XyH"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Notes" id="YfH-gg-BY2"/>
