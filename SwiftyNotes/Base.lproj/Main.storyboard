@@ -104,9 +104,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search by title or tag..." id="uvA-a0-aDE">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="ees-hh-psU" style="IBUITableViewCellStyleSubtitle" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -142,10 +147,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="Zdf-7t-Un8"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="Ind-gz-xkk" id="Ys1-fR-Vk8"/>
                         <segue destination="Qmw-Xe-u6P" kind="presentation" identifier="showSegue" id="h1O-K6-cm0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Ind-gz-xkk">
+                    <connections>
+                        <outlet property="delegate" destination="7bK-jq-Zjz" id="EGR-YP-KR7"/>
+                        <outlet property="searchContentsController" destination="7bK-jq-Zjz" id="awn-do-W63"/>
+                        <outlet property="searchResultsDataSource" destination="7bK-jq-Zjz" id="Xg2-9a-XgE"/>
+                        <outlet property="searchResultsDelegate" destination="7bK-jq-Zjz" id="fB1-WN-fzA"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
@@ -179,7 +193,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prr-KZ-8Zf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem id="ATA-Tw-yEp">
+                                    <navigationItem title="Notes" id="ATA-Tw-yEp">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QzU-uP-XyS">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
