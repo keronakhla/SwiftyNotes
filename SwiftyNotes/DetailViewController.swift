@@ -48,10 +48,12 @@ class DetailViewController: UIViewController {
         
     }
 
+    @IBAction func shareNote(sender: AnyObject) {
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 

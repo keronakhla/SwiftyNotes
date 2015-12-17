@@ -73,7 +73,13 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Notes" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Notes" id="mOI-FS-AaM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="T0m-6P-VLM">
+                            <connections>
+                                <action selector="shareNote:" destination="JEX-9P-axG" id="TeF-Jj-LqR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="r0c-9D-yZG" id="gg5-7f-LsR"/>
                     </connections>
