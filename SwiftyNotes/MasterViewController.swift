@@ -10,7 +10,20 @@ import UIKit
 import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    lazy var notes : NSFetchedResultsController = {
+        let request = NSFetchRequest(entityName: "Note")
+        request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: false)]
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let notes = NSFetchedResultsController(fetchRequest: request, managedObjectContext: appDelegate.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        notes.delegate = self
+        return notes
+    }()
+    
 
+    
+    
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
@@ -32,10 +45,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
-        super.viewWillAppear(animated)
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,15 +53,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func insertNewObject(sender: AnyObject) {
+        performSegueWithIdentifier("showSegue", sender: self)
+        
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
         let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
-             
+        
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-        performSegueWithIdentifier("showSegue", sender: self)
-             
+        
         // Save the context.
         do {
             try context.save()
@@ -61,6 +72,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             //print("Unresolved error \(error), \(error.userInfo)")
             abort()
         }
+
+        
     }
 
     // MARK: - Segues
@@ -117,8 +130,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        //cell.textLabel!.text = object.valueForKey("timeStamp")!.description
+        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
         cell.detailTextLabel!.text = object.valueForKey("timeStamp")!.description
+        
     }
 
     // MARK: - Fetched results controller
