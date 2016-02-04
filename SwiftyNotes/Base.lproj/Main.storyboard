@@ -210,23 +210,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prr-KZ-8Zf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <animations/>
-                                <items>
-                                    <navigationItem title="Notes" id="ATA-Tw-yEp">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QzU-uP-XyS">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="doneButton:" destination="Qmw-Xe-u6P" id="Cge-zx-rST"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-=======
->>>>>>> user-story-1-create-edit-and-delete-notes
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-wd-hqO">
                                 <rect key="frame" x="20" y="40" width="560" height="440"/>
                                 <subviews>
@@ -243,23 +227,15 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-Tq-6iM">
-<<<<<<< HEAD
-                                        <rect key="frame" x="14" y="143" width="532" height="236"/>
-                                        <animations/>
-=======
+
                                         <rect key="frame" x="14" y="143" width="532" height="192"/>
->>>>>>> user-story-1-create-edit-and-delete-notes
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-Qh-5YW">
-<<<<<<< HEAD
-                                        <rect key="frame" x="14" y="439" width="532" height="30"/>
-                                        <animations/>
-=======
+
                                         <rect key="frame" x="14" y="395" width="532" height="30"/>
->>>>>>> user-story-1-create-edit-and-delete-notes
                                         <color key="backgroundColor" red="0.1647058824" green="0.1960784314" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="SAVE NOTE"/>
