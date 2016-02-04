@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
 
     @IBAction func shareNote(sender: AnyObject) {
         
-        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView], applicationActivities: nil)
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [detailDescriptionLabel.text!, textView.text!], applicationActivities: nil)
         self.presentViewController(activityViewController, animated: true, completion: nil)
 
         
