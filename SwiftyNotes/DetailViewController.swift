@@ -44,11 +44,34 @@ class DetailViewController: UIViewController {
         
         //textView.text = "SDFSDFSDFDSFDSFSD"
         
-    
-    
-
+        
+        
         
     }
+    
+//    func NSTextCheckingTypesFromUIDataDetectorTypes(dataDetectorType: UIDataDetectorTypes) -> NSTextCheckingType {
+//        var textCheckingType: NSTextCheckingType = []
+//        
+//        if dataDetectorType.contains(.Address) {
+//            textCheckingType.insert(.Address)
+//        }
+//        
+//        if dataDetectorType.contains(.CalendarEvent) {
+//            textCheckingType.insert(.Date)
+//        }
+//        
+//        if dataDetectorType.contains(.Link) {
+//            textCheckingType.insert(.Link)
+//        }
+//        
+//        if dataDetectorType.contains(.PhoneNumber) {
+//            textCheckingType.insert(.PhoneNumber)
+//        }
+//        
+//        return textCheckingType
+//    }
+    
+
 
     @IBAction func shareNote(sender: AnyObject) {
         
