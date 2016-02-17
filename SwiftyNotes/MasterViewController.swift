@@ -21,8 +21,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return notes
     }()
     
-
     
+    // Cloud Stack
+    lazy var stack : CoreDataStack = {
+        let options = [NSPersistentStoreUbiquitousContentNameKey: "CloudNotes",
+            NSMigratePersistentStoresAutomaticallyOption: true,
+            NSInferMappingModelAutomaticallyOption: true]
+        return CoreDataStack(modelName: "SwiftyNotes",
+            storeName: "CloudNotes",
+            options: options)
+    }()
     
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil

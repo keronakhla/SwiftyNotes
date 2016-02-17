@@ -10,6 +10,8 @@
 		5105152E1C114FA100FF95F5 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105152C1C114FA100FF95F5 /* Note+CoreDataProperties.swift */; };
 		5105152F1C114FA100FF95F5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105152D1C114FA100FF95F5 /* Note.swift */; };
 		514EC7961C3A3ACA00182671 /* CreateNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EC7951C3A3ACA00182671 /* CreateNewNoteViewController.swift */; };
+		518F4C711C750FD800F02267 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518F4C701C750FD800F02267 /* CloudKit.framework */; };
+		518F4C731C751FB100F02267 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F4C721C751FB100F02267 /* CoreDataStack.swift */; };
 		51980D851C0C333200CDD5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51980D841C0C333200CDD5D1 /* AppDelegate.swift */; };
 		51980D881C0C333200CDD5D1 /* SwiftyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51980D861C0C333200CDD5D1 /* SwiftyNotes.xcdatamodeld */; };
 		51980D8A1C0C333200CDD5D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51980D891C0C333200CDD5D1 /* MasterViewController.swift */; };
@@ -42,6 +44,9 @@
 		5105152C1C114FA100FF95F5 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5105152D1C114FA100FF95F5 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		514EC7951C3A3ACA00182671 /* CreateNewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewNoteViewController.swift; sourceTree = "<group>"; };
+		518F4C6F1C750FCC00F02267 /* SwiftyNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SwiftyNotes.entitlements; sourceTree = "<group>"; };
+		518F4C701C750FD800F02267 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		518F4C721C751FB100F02267 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		51980D811C0C333200CDD5D1 /* SwiftyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51980D841C0C333200CDD5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51980D871C0C333200CDD5D1 /* SwiftyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftyNotes.xcdatamodel; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518F4C711C750FD800F02267 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,7 @@
 		51980D781C0C333200CDD5D1 = {
 			isa = PBXGroup;
 			children = (
+				518F4C701C750FD800F02267 /* CloudKit.framework */,
 				51980D831C0C333200CDD5D1 /* SwiftyNotes */,
 				51980D9D1C0C333200CDD5D1 /* SwiftyNotesTests */,
 				51980DA81C0C333200CDD5D1 /* SwiftyNotesUITests */,
@@ -107,12 +114,14 @@
 		51980D831C0C333200CDD5D1 /* SwiftyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				518F4C6F1C750FCC00F02267 /* SwiftyNotes.entitlements */,
 				5105152C1C114FA100FF95F5 /* Note+CoreDataProperties.swift */,
 				5105152D1C114FA100FF95F5 /* Note.swift */,
 				51980D841C0C333200CDD5D1 /* AppDelegate.swift */,
 				51980D891C0C333200CDD5D1 /* MasterViewController.swift */,
 				51980D8B1C0C333200CDD5D1 /* DetailViewController.swift */,
 				514EC7951C3A3ACA00182671 /* CreateNewNoteViewController.swift */,
+				518F4C721C751FB100F02267 /* CoreDataStack.swift */,
 				51980D8D1C0C333200CDD5D1 /* Main.storyboard */,
 				51980D901C0C333200CDD5D1 /* Assets.xcassets */,
 				51980D921C0C333200CDD5D1 /* LaunchScreen.storyboard */,
@@ -208,6 +217,12 @@
 				TargetAttributes = {
 					51980D801C0C333200CDD5D1 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = H3AZM49634;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					51980D991C0C333200CDD5D1 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -278,6 +293,7 @@
 				51980D8C1C0C333200CDD5D1 /* DetailViewController.swift in Sources */,
 				5105152E1C114FA100FF95F5 /* Note+CoreDataProperties.swift in Sources */,
 				5105152F1C114FA100FF95F5 /* Note.swift in Sources */,
+				518F4C731C751FB100F02267 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftyNotes/SwiftyNotes.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftyNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keronakhla.SwiftyNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.keronakhla.SwiftyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,10 +450,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftyNotes/SwiftyNotes.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftyNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keronakhla.SwiftyNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.keronakhla.SwiftyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
