@@ -11,6 +11,8 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     lazy var notes : NSFetchedResultsController = {
         let request = NSFetchRequest(entityName: "Note")
         request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: false)]
@@ -21,15 +23,22 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return notes
     }()
     
-
+    
     
     
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-
+    
+    var filteredNotes = [Note]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
         // Do any additional setup after loading the view, typically from a nib.
         UINavigationBar.appearance().barTintColor = UIColor(red: 46.0/225, green: 204.0/225, blue: 113.0/225, alpha: 1.0)
         
@@ -44,8 +53,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
     }
-
-
+    // Helper Method
+//    func filterContentForSearchText(searchText: String, scope: String = "All") {
+//        filteredNotes = Note { note in
+//            return noteTitle.lowercaseString.containString(searchText.lowercaseString)
+//        }
+//        tableView.reloadData()
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
