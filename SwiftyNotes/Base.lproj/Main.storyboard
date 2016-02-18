@@ -33,11 +33,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0c-9D-yZG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0c-9D-yZG">
                                 <rect key="frame" x="34" y="158" width="532" height="302"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-pn-22g">
                                 <rect key="frame" x="34" y="101" width="532" height="30"/>
@@ -48,7 +49,10 @@
                                 <rect key="frame" x="34" y="510" width="532" height="30"/>
                                 <color key="backgroundColor" red="0.16470588235294117" green="0.19607843137254902" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="SAVE NOTE"/>
+                                <state key="normal" title="EDIT"/>
+                                <connections>
+                                    <action selector="makeNoteEditable:" destination="JEX-9P-axG" eventType="touchUpInside" id="HZK-xg-Hcb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>

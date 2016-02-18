@@ -34,22 +34,34 @@ class DetailViewController: UIViewController {
         }
     }
 
+
+    
+    @IBAction func makeNoteEditable(sender: AnyObject) {
+        let editButton: UIButton = sender as! UIButton
+        editButton.setTitle("Done", forState: .Normal)
+        textView.editable = true
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
 
+        
+        
         textView.clipsToBounds = true
         textView.layer.cornerRadius = 5
         
         //textView.text = "SDFSDFSDFDSFDSFSD"
+//        let string = textView.text
+//        let types: NSTextCheckingType = [.Address, .PhoneNumber]
+//        let detector = try? NSDataDetector(types: types.rawValue)
+//        detector?.enumerateMatchesInString(string, options: [], range: NSMakeRange(0, (string as NSString).length)) { (result, flags, _) in
+//            print(result)
+//        }
         
-        let string = textView.text
-        let types: NSTextCheckingType = [.Address, .PhoneNumber]
-        let detector = try? NSDataDetector(types: types.rawValue)
-        detector?.enumerateMatchesInString(string, options: [], range: NSMakeRange(0, (string as NSString).length)) { (result, flags, _) in
-            print(result)
-        }
     }
 //    func NSTextCheckingTypesFromUIDataDetectorTypes(dataDetectorType: UIDataDetectorTypes) -> NSTextCheckingType {
 //        var textCheckingType: NSTextCheckingType = []
